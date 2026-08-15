@@ -8,14 +8,14 @@ export const FooterShell = () => {
   };
 
   return (
-    <footer className="py-5 border-top border-secondary" style={{ backgroundColor: 'var(--bg-surface)' }}>
+    <footer className="py-5" style={{ backgroundColor: 'var(--bg-surface)', borderTop: '1px solid var(--border-color)' }}>
       <Container>
         <Row className="gy-4 align-items-center justify-content-between">
           <Col md={6} className="text-center text-md-start">
             <span className="fw-bold fs-5 font-mono" style={{ color: 'var(--text-main)' }}>
               <span className="text-info">&lt;</span>ShadyHawwary <span className="text-info">/&gt;</span>
             </span>
-            <p className="small text-muted mb-0 mt-2 font-mono">
+            <p className="small mb-0 mt-2 font-mono" style={{ color: 'var(--text-muted)' }}>
               &copy; {new Date().getFullYear()} {profileData.name}. {profileData.title}.
             </p>
           </Col>
@@ -26,8 +26,11 @@ export const FooterShell = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted text-decoration-none fs-5 px-1"
+                className="text-decoration-none fs-5 px-1"
                 aria-label={social.name}
+                style={{ color: 'var(--text-muted)', transition: 'color 0.2s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-cyan)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
               >
                 <i className={`bi ${social.icon}`}></i>
               </a>

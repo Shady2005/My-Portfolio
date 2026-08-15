@@ -1,8 +1,10 @@
 export const profileData = {
   name: "Shady Hawwary Hassan Alhawwary",
   title: "Backend Developer & Business Technology Student",
+  age: "21 Years Old",
+  education: "Senior (4th Year) Student at Canadian International College (CIC) - Business Technology Major (70% Computer Science / 30% Business)",
   tagline: "Building scalable, resilient backend services, relational database architecture, and business technology solutions.",
-  bio: `I am a Backend Developer & Business Technology Student passionate about building scalable server-side systems, optimizing relational database architectures, and integrating software with business tech solutions. Focused on clean code, security best practices, and efficient API design.`,
+  bio: `I am a 21-year-old Backend Developer & Senior (4th Year) Student at Canadian International College (CIC), majoring in Business Technology (70% Computer Science / 30% Business). Passionate about building scalable server-side systems, optimizing relational database architectures, and integrating software with business tech solutions. Focused on clean code, security best practices, and efficient API design.`,
   socialLinks: [
     {
       name: "GitHub",

@@ -18,7 +18,7 @@ export const ProjectCard = memo(({ project }) => {
         <h3 className="h5 fw-bold mb-2" style={{ color: 'var(--text-main)' }}>
           {project.title}
         </h3>
-        <p className="text-muted small mb-4" style={{ lineHeight: '1.6' }}>
+        <p className="small mb-4" style={{ color: 'var(--text-muted)', lineHeight: '1.65', fontSize: '0.925rem' }}>
           {project.description}
         </p>
       </div>
@@ -41,7 +41,7 @@ export const ProjectCard = memo(({ project }) => {
           ))}
         </div>
 
-        <div className="pt-3 border-top border-secondary">
+        <div className="pt-3" style={{ borderTop: '1px solid var(--border-color)' }}>
           <a
             href={project.githubUrl}
             target="_blank"

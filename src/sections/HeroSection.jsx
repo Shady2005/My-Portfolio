@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { profileData } from '../data/profileData';
+import { CvModal } from '../components/CvModal';
 
 export const HeroSection = () => {
+  const [showCvModal, setShowCvModal] = useState(false);
+
   return (
     <section id="hero" className="section-wrapper pt-5 mt-4 d-flex align-items-center" style={{ minHeight: '88vh' }} role="region" aria-labelledby="hero-heading">
       <Container>
@@ -58,12 +61,26 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            <div className="d-flex flex-wrap gap-3 mb-4">
-              <a href="#projects" className="btn btn-cyan" aria-label="Navigate to Projects section">
-                View Projects <i className="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+            {/* CTA Buttons with Prominent CV Action */}
+            <div className="d-flex flex-wrap align-items-center gap-3 mb-4">
+              <a
+                href="/Shady_Hawwary_CV.pdf"
+                download="Shady_Hawwary_CV.pdf"
+                className="btn btn-cyan font-mono d-inline-flex align-items-center gap-2"
+                aria-label="Download Shady Hawwary CV PDF"
+              >
+                <i className="bi bi-download fs-5" aria-hidden="true"></i> Download CV
               </a>
-              <a href="#contact" className="btn btn-outline-tech" aria-label="Navigate to Contact section">
-                Contact Me
+              <button
+                type="button"
+                className="btn btn-outline-tech font-mono d-inline-flex align-items-center gap-2"
+                onClick={() => setShowCvModal(true)}
+                aria-label="Preview Shady Hawwary CV in modal"
+              >
+                <i className="bi bi-file-earmark-pdf-fill text-danger fs-5" aria-hidden="true"></i> Preview CV
+              </button>
+              <a href="#projects" className="btn btn-outline-tech font-mono" aria-label="Navigate to Projects section">
+                Projects <i className="bi bi-arrow-right ms-1" aria-hidden="true"></i>
               </a>
             </div>
 
@@ -140,6 +157,10 @@ export const HeroSection = () => {
           </Col>
         </Row>
       </Container>
+
+      {/* CV Modal Preview */}
+      <CvModal show={showCvModal} onHide={() => setShowCvModal(false)} />
     </section>
   );
 };
+

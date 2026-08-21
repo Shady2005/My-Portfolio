@@ -5,7 +5,8 @@ export const certificationsData = [
     issuer: "Cisco Networking Academy",
     date: "March 26, 2026",
     description: "Routing & Switching, IPv4/IPv6 Addressing, Network Security Best Practices, Connectivity Troubleshooting.",
-    type: "certification"
+    type: "certification",
+    image: "/ccna.png"
   },
   {
     id: "iti-php-fullstack",
@@ -13,22 +14,36 @@ export const certificationsData = [
     issuer: "Information Technology Institute (ITI)",
     date: "Aug 5, 2025 – Sep 6, 2025",
     description: "Client-Side Technologies (48 hrs), PHP (30 hrs), Laravel (30 hrs), MySQL (12 hrs).",
-    type: "certification"
+    type: "certification",
+    image: "/iti.jpeg"
   },
   {
     id: "summit-db-internship-2025",
-    title: "Database Internship 2025",
+    title: "Summit Technology Solutions Internship 2025",
     company: "Summit Technology Solutions",
     date: "Summer 2025",
     description: "Advanced database queries, data integrity management, and data tracking scenarios with the Data Management Team.",
-    type: "experience"
+    type: "experience",
+    image: "/summit2025.jpeg"
   },
   {
     id: "summit-data-internship-2024",
-    title: "Data Management Internship 2024",
+    title: "Summit Technology Solutions Data Internship 2024",
     company: "Summit Technology Solutions",
     date: "July 15, 2024 – Aug 15, 2024",
     description: "SQL queries, relational database design (schemas, keys, indexes, stored procedures), and database optimization.",
-    type: "experience"
+    type: "experience",
+    image: "/summit2024.jpg"
+  },
+  {
+    id: "enactus-cic-backend",
+    title: "Enactus CIC Member & Backend Developer",
+    company: "Enactus CIC - Zayed",
+    role: "Member as IT / Backend Developer",
+    date: "2024 – 2025",
+    description: "Contributed to entrepreneurial student projects using backend logic and IT architecture.",
+    type: "experience",
+    image: "/enactus.jpg"
   }
 ];
+

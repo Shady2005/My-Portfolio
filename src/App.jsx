@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Container, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import { HeaderNav } from './components/HeaderNav';
 import { FooterShell } from './components/FooterShell';
 
@@ -7,6 +7,7 @@ import { FooterShell } from './components/FooterShell';
 const HeroSection = lazy(() => import('./sections/HeroSection').then((m) => ({ default: m.HeroSection })));
 const ProjectsSection = lazy(() => import('./sections/ProjectsSection').then((m) => ({ default: m.ProjectsSection })));
 const CertificationsSection = lazy(() => import('./sections/CertificationsSection').then((m) => ({ default: m.CertificationsSection })));
+const ResumeSection = lazy(() => import('./sections/ResumeSection').then((m) => ({ default: m.ResumeSection })));
 const ContactSection = lazy(() => import('./sections/ContactSection').then((m) => ({ default: m.ContactSection })));
 
 const SectionLoader = () => (
@@ -26,6 +27,7 @@ export function App() {
           <HeroSection />
           <ProjectsSection />
           <CertificationsSection />
+          <ResumeSection />
           <ContactSection />
         </Suspense>
       </main>
@@ -35,3 +37,4 @@ export function App() {
 }
 
 export default App;
+

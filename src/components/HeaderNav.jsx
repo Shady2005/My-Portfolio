@@ -16,7 +16,7 @@ export const HeaderNav = () => {
   }, [theme]);
 
   useEffect(() => {
-    const sectionIds = ['hero', 'projects', 'certifications', 'contact'];
+    const sectionIds = ['hero', 'projects', 'certifications', 'resume', 'contact'];
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 
     const observer = new IntersectionObserver(
@@ -81,7 +81,13 @@ export const HeaderNav = () => {
               href="#certifications"
               className={`nav-link-custom px-2 fw-medium ${activeSection === 'certifications' ? 'active text-info' : ''}`}
             >
-              Credentials & Experience
+              Credentials
+            </Nav.Link>
+            <Nav.Link
+              href="#resume"
+              className={`nav-link-custom px-2 fw-medium ${activeSection === 'resume' ? 'active text-info' : ''}`}
+            >
+              Resume / CV
             </Nav.Link>
             <Nav.Link
               href="#contact"
@@ -96,6 +102,7 @@ export const HeaderNav = () => {
               className="font-mono ms-lg-2 d-flex align-items-center gap-2"
               aria-label="Toggle Theme"
             >
+
               {theme === 'dark' ? (
                 <>
                   <i className="bi bi-sun-fill text-warning"></i> Light

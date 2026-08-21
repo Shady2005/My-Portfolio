@@ -267,3 +267,101 @@ code, pre, .font-mono {
     max-width: 1280px;
   }
 }
+
+/* Certificate Card Image & Light Modal Styling */
+.cert-img-wrapper {
+  width: 100%;
+  height: 200px;
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cert-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-img-wrapper:hover .cert-card-img,
+.cert-img-wrapper:focus-visible .cert-card-img {
+  transform: scale(1.06);
+}
+
+.cert-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.72);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-img-wrapper:hover .cert-img-overlay,
+.cert-img-wrapper:focus-visible .cert-img-overlay {
+  opacity: 1;
+}
+
+.cert-img-wrapper:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: -2px;
+}
+
+.cert-modal-content {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 14px;
+}
+
+.cert-modal-content .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="light"] .cert-modal-content .btn-close {
+  filter: none;
+}
+
+.cert-modal-img {
+  max-height: 70vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border: 1px solid var(--border-color);
+}
+
+/* CV Section & Modal Styling */
+.cv-modal-content {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 14px;
+}
+
+.cv-modal-content .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="light"] .cv-modal-content .btn-close {
+  filter: none;
+}
+
+.cv-preview-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-preview-card:hover {
+  border-color: var(--border-glow) !important;
+  box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15) !important;
+}
+
+@media (max-width: 768px) {
+  .cv-iframe-wrapper {
+    height: 420px !important;
+  }
+}
+
+
